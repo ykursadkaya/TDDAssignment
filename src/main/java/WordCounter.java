@@ -6,7 +6,7 @@ public class WordCounter
 {
 	public static int count(String input)
 	{
-		String[] words = input.toLowerCase().replaceAll("[,\\.]", "").split(" ");
+		String[] words = input.toLowerCase().replaceAll("[,\\.]", "").split("\\s+");
 		Set uniqueWords = new HashSet(Arrays.asList(words));
 
 		return uniqueWords.size();

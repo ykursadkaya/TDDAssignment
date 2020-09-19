@@ -59,4 +59,19 @@ public class WordCounterTests
 		//Assert
 		assertThat(output).isEqualTo(6);
 	}
+
+
+	@Test
+	public void count_WhenInputHasMoreThanOneConsequentSpace_ShouldReturnUniqueWordCount()
+	{
+		// Arrange
+		WordCounter sut = new WordCounter();
+
+		//Act
+		String input = "This is a test and a good     test";
+		int output = WordCounter.count(input);
+
+		//Assert
+		assertThat(output).isEqualTo(6);
+	}
 }
